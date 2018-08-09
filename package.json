@@ -1,0 +1,22 @@
+{
+  "name": "blikk",
+  "version": "1.0.0",
+  "description": "Responsive Landing Page Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "node-sass": "node-sass --output-style compressed -o dist/css src/scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Travisg25/blikk.git"
+  },
+  "author": "Travis Grossman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Travisg25/blikk/issues"
+  },
+  "homepage": "https://github.com/Travisg25/blikk#readme",
+  "dependencies": {
+    "node-sass": "^4.9.3"
+  }
+}
