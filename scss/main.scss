@@ -99,7 +99,7 @@ main {
     }
   }
 }
-// Menu
+// Menu /////////////
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -131,15 +131,25 @@ main {
       &:nth-child(2) {
         opacity: 0;
       }
-
-      //Line 3
-
+      //Line 3 rotate
       &:nth-child(3) {
         background: $seconday-color;
 
         transform: rotate(-45deg) translate(7px, -6px);
       }
     }
+  }
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.8;
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
   }
 }
 
