@@ -4,7 +4,7 @@
   "description": "Responsive Landing Page Portfolio",
   "main": "index.js",
   "scripts": {
-    "node-sass": "node-sass --output-style compressed -o dist/css src/scss"
+    "sass": "node-sass --output-style compressed -o dist/css src/scss"
   },
   "repository": {
     "type": "git",
