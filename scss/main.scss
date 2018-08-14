@@ -114,6 +114,24 @@ main {
   }
 }
 
+// Work Porfolio area
+
+.projects {
+  display: grid;
+  grid-gap: 1.1rem;
+  grid-template-columns: repeat(3, 1fr);
+  img {
+    width: 100%;
+    border: 3px #fff solid;
+
+    &:hover {
+      opacity: 0.5;
+      border: $seconday-color 3px solid;
+      @include easeOut;
+    }
+  }
+}
+
 #main-footer {
   text-align: center;
   padding: 1rem;
