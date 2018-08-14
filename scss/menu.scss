@@ -86,9 +86,17 @@
     .portrait {
       width: 250px;
       height: 250px;
-      background: url(img/johnsmith.jpg);
+      background: url(dist/img/SqLgjohnsmith.jpg);
       border-radius: 50%;
       border: solid 3px $seconday-color;
+      align-items: center;
+
+      .img {
+        border-radius: 50%;
+        height: 100%;
+        width: 100%;
+        align-self: center;
+      }
 
       img {
         // opacity: 1;
@@ -128,7 +136,7 @@
   }
 }
 
-// Delay for slide in
+// Delay for menu slide in
 
 @for $i from 1 through 4 {
   .nav-item:nth-child(#{$i}) {
