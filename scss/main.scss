@@ -118,7 +118,7 @@ main {
 
 .projects {
   display: grid;
-  grid-gap: 1.1rem;
+  grid-gap: 0.9rem;
   grid-template-columns: repeat(3, 1fr);
   img {
     width: 100%;
@@ -130,6 +130,59 @@ main {
       @include easeOut;
     }
   }
+}
+
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+
+  &:hover {
+    background: $seconday-color;
+    color: set-text-color($seconday-color);
+  }
+}
+
+//Contact
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+
+  div {
+    font-size: 1.2rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    @include easeOut;
+
+    &:hover {
+      padding: 0.5rem 1.5rem;
+      background: $seconday-color;
+      color: set-text-color($seconday-color);
+
+      span {
+        color: set-text-color($seconday-color);
+      }
+    }
+  }
+}
+
+// Buttons
+.btn-dark {
+  @extend .btn;
+  background: darken($primary-color, 50);
+  color: #fff;
+}
+
+.btn-light {
+  @extend .btn;
+  background: lighten($primary-color, 50);
+  color: #333;
 }
 
 #main-footer {
