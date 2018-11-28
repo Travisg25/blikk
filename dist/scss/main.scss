@@ -14,7 +14,7 @@ body {
   line-height: 1.5;
 }
 i {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 h1,
@@ -50,7 +50,18 @@ header {
 .text-secondary {
   color: $seconday-color;
 }
-
+.overlay {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  // background: rgba(105, 100, 108, 0.63);
+}
+.bio-overlay {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgba(105, 100, 108, 0.33);
+}
 main {
   padding: 4rem;
   // height: 100%;
@@ -119,10 +130,24 @@ main {
 
 // Work Porfolio area
 
+.github-icon {
+  top: 0;
+  font-size: 1.5rem;
+  margin: 3px;
+
+  &:hover {
+    font-size: 2rem;
+    opacity: 0.5;
+    color: $seconday-color;
+    @include easeOut;
+  }
+}
+
 .projects {
   display: grid;
   grid-gap: 0.9rem;
   grid-template-columns: repeat(3, 1fr);
+  text-align: center;
   img {
     width: 100%;
     border: 3px #fff solid;
@@ -130,6 +155,16 @@ main {
     &:hover {
       opacity: 0.5;
       border: $seconday-color 3px solid;
+      @include easeOut;
+    }
+  }
+  .project-title {
+    text-align: center;
+
+    &:hover {
+      padding: 2px 5px;
+      // border: white solid 2px;
+      // color: darken($primary-color, 20);
       @include easeOut;
     }
   }
@@ -145,6 +180,24 @@ main {
     background: $seconday-color;
     color: set-text-color($seconday-color);
   }
+}
+.project-description {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+
+  &:hover {
+    background: $seconday-color;
+    color: set-text-color($seconday-color);
+  }
+}
+
+.job-dark {
+  padding: 1px;
+  border: black solid 2px;
+  // background: darken($primary-color, 50);
+  color: #fff;
 }
 
 //Contact

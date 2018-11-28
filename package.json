@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "Responsive Landing Page Portfolio",
   "main": "index.js",
-  "scripts": {
-    "sass": "node-sass --output-style compressed -o dist/css src/scss"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Travisg25/blikk.git"
@@ -17,6 +15,6 @@
   },
   "homepage": "https://github.com/Travisg25/blikk#readme",
   "dependencies": {
-    "node-sass": "^4.9.0"
+    "node-sass": "^4.10.0"
   }
 }
