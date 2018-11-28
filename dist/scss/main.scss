@@ -144,10 +144,10 @@ main {
 .github-icon {
   top: 0;
   font-size: 1.5rem;
-  margin: 3px;
+  margin: 1px;
 
   &:hover {
-    font-size: 2rem;
+    font-size: 1.5rem;
     opacity: 0.5;
     color: $seconday-color;
     @include easeOut;
@@ -206,7 +206,7 @@ main {
 
 .job-dark {
   padding: 1px;
-  border: black solid 2px;
+  border: black solid 1px;
   // background: darken($primary-color, 50);
   color: #fff;
 }

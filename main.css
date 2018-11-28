@@ -225,9 +225,9 @@ main {
 .github-icon {
   top: 0;
   font-size: 1.5rem;
-  margin: 3px; }
+  margin: 1px; }
   .github-icon:hover {
-    font-size: 2rem;
+    font-size: 1.5rem;
     opacity: 0.5;
     color: #2fdd46;
     transition: all 0.6s ease-in-out; }
@@ -270,7 +270,7 @@ main {
 
 .job-dark {
   padding: 1px;
-  border: black solid 2px;
+  border: black solid 1px;
   color: #fff; }
 
 .boxes {
