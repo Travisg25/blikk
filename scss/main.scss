@@ -1,0 +1,265 @@
+@import "config";
+@import "menu";
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+SC");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include backgroundSet;
+  background: $primary-color;
+  color: set-text-color($primary-color);
+  height: 100%;
+  margin: 0;
+  font-family: "Noto Sans SC", "Segoe UI", Tahoma, Geneva;
+  line-height: 1.5;
+}
+i {
+  margin-right: 5px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+
+  &.lg-heading {
+    font-size: 6rem;
+  }
+
+  &.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    // background-color: rgba(lighten($primary-color, 2), 0.5);
+  }
+}
+a {
+  color: #ffff;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.text-secondary {
+  color: $seconday-color;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgba(105, 100, 108, 0.33);
+}
+
+.front-page-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  background: rgba(105, 100, 108, 0.33);
+}
+.bio-overlay {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgba(105, 100, 108, 0.33);
+}
+main {
+  padding: 4rem;
+  // height: 100%;
+  min-height: calc(100vh - 3.8rem);
+
+  &#home {
+    overflow: hidden;
+
+    h1 {
+      margin-top: 20vh;
+    }
+  }
+
+  .icons {
+    margin-top: 1rem;
+
+    a {
+      padding: 0.4rem;
+
+      &:hover {
+        color: $seconday-color;
+        @include easeOut();
+      }
+    }
+  }
+}
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+    "bioimage bio bio"
+    "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr);
+
+  .bio-image {
+    grid-area: bioimage;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: $seconday-color 3px solid;
+  }
+
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+  }
+
+  .job-1 {
+    grid-area: job1;
+  }
+
+  .job-2 {
+    grid-area: job2;
+  }
+
+  .job-3 {
+    grid-area: job3;
+  }
+
+  .job {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $seconday-color 5px solid;
+  }
+}
+
+// Work Porfolio area
+
+.github-icon {
+  top: 0;
+  font-size: 1.5rem;
+  margin: 1px;
+
+  &:hover {
+    font-size: 1.5rem;
+    opacity: 0.5;
+    color: $seconday-color;
+    @include easeOut;
+  }
+}
+
+.projects {
+  display: grid;
+  grid-gap: 0.9rem;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  img {
+    width: 100%;
+    border: 3px #fff solid;
+
+    &:hover {
+      opacity: 0.5;
+      border: $seconday-color 3px solid;
+      @include easeOut;
+    }
+  }
+  .project-title {
+    text-align: center;
+
+    &:hover {
+      padding: 2px 5px;
+      // border: white solid 2px;
+      // color: darken($primary-color, 20);
+      @include easeOut;
+    }
+  }
+}
+
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+
+  &:hover {
+    background: $seconday-color;
+    color: set-text-color($seconday-color);
+  }
+}
+.project-description {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+
+  &:hover {
+    background: $seconday-color;
+    color: set-text-color($seconday-color);
+  }
+}
+
+.job-dark {
+  padding: 1px;
+  border: black solid 1px;
+  // background: darken($primary-color, 50);
+  color: #fff;
+}
+
+//Contact
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+
+  div {
+    font-size: 1.2rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    @include easeOut;
+
+    &:hover {
+      padding: 0.5rem 1.5rem;
+      background: $seconday-color;
+      color: set-text-color($seconday-color);
+
+      span {
+        color: set-text-color($seconday-color);
+      }
+    }
+  }
+}
+
+// Buttons
+.btn-dark {
+  @extend .btn;
+  background: darken($primary-color, 50);
+  color: #fff;
+}
+
+.btn-light {
+  @extend .btn;
+  background: lighten($primary-color, 50);
+  color: #333;
+}
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, 10);
+  color: set-text-color($primary-color);
+  height: 3.8rem;
+}
+
+.bottombottom {
+}
+@import "mobile";
