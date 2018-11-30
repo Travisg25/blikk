@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Responsive Landing Page Portfolio",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Travisg25/blikk.git"
@@ -13,8 +15,9 @@
   "bugs": {
     "url": "https://github.com/Travisg25/blikk/issues"
   },
-  "homepage": "https://github.com/Travisg25/blikk#readme",
+  "homepage": "https://github.com/Travisg25/blikk",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "node-sass": "^4.10.0"
   }
 }
